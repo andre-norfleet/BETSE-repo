@@ -1,0 +1,98 @@
+Completed  0  % ... 
+iteration: 1 
+Completed  0  % ... 
+iteration: 1 
+Completed  0  % ... 
+iteration: 1 
+Completed  0  % ... 
+iteration: 1 
+Simulation time for iteration 1: 7775.973799 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: -0.000017 
+err = Inf 
+Completed  5  % ... 
+iteration: 2 
+Simulation time for iteration 2: 5464.221109 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: 0.000067 
+err = Inf 
+Completed  10  % ... 
+iteration: 3 
+Simulation time for iteration 3: 4178.093902 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: 0.000067 
+err = Inf 
+Completed  15  % ... 
+iteration: 4 
+Simulation time for iteration 4: 2882.785131 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: 0.000088 
+err = Inf 
+Completed  20  % ... 
+iteration: 5 
+Simulation time for iteration 5: 3053.755043 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: 0.000088 
+err = Inf 
+Completed  25  % ... 
+iteration: 6 
+Simulation time for iteration 6: 2865.555565 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: 0.000088 
+err = Inf 
+Completed  30  % ... 
+iteration: 7 
+Simulation time for iteration 7: 2498.312889 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: 0.000088 
+err = Inf 
+Completed  35  % ... 
+iteration: 8 
+Simulation time for iteration 8: 2685.848034 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: 0.000088 
+err = Inf 
+Completed  40  % ... 
+iteration: 9 
+Simulation time for iteration 9: 2749.249948 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: 0.000088 
+err = Inf 
+Completed  45  % ... 
+iteration: 10 
+Simulation time for iteration 10: 2613.355343 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: 0.000088 
+err = Inf 
+Completed  50  % ... 
+iteration: 11 
+Simulation time for iteration 11: 2786.619062 
+Optimal parameters until now: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Optimal score until now: 0.000088 
+err = 0.000000 
+Final optimal parameters: 
+Parameter Dm_K = 0 
+Parameter Dm_Na = 0 
+Final optimal score: 0.000088 

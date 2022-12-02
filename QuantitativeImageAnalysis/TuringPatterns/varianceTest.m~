@@ -1,0 +1,87 @@
+
+
+
+% test variance:
+
+% read all the images in this folder, compute the trees, print them
+folderName = '/Users/ebru/Desktop/TuringDataSet/PATTERN32/Images32set2/';
+
+
+imageNames = dir(folderName);
+images = {};
+imCount = 0;
+for i=1:length(imageNames)
+    if(length( imageNames(i).name ) >= 2 && imageNames(i).name(end) == 'g' && imageNames(i).name(end-1) == 'n')
+        imCount = imCount + 1;
+        fname = [folderName, imageNames(i).name];
+        imO = imread(fname, 'png');
+        images{imCount} = imO;
+    end
+end
+
+if(imCount == 0)
+    display('No image in the given directory');
+    return;
+end
+
+tmp = images{1}(:,:,1);
+patternSize = length(tmp);
+
+
+TreeSize = [ log2(patternSize)  , patternSize*patternSize/4 ] 
+
+
+sp = 10;
+
+
+OUTPUT = uint8(zeros(patternSize*imCount*1.2 , patternSize + TreeSize(2) + sp, 3));
+
+
+
+
+for i=1:imCount
+   
+    ss = 1 + int16((i-1)*patternSize*1.2);
+    si = ss;
+    
+    OUTPUT(si:si+patternSize-1 , 1:patternSize, :) = images{i};
+    
+    
+    [ tree, treeVar ]  = calculateQuadtree(double(images{i}(:,:,1)));
+    tree = removeLastLevel(tree);
+    treeVar = removeLastLevel(treeVar);
+    si = si + 6 ;
+    
+    tree = 255*tree/max(max(tree));
+    
+    OUTPUT(si:si+TreeSize(1) - 1, patternSize + sp+1: end, 1) = tree;
+    OUTPUT(si:si+TreeSize(1) - 1, patternSize + sp+1: end, 2) = tree;
+    OUTPUT(si:si+TreeSize(1) - 1, patternSize + sp+1: end, 3) = tree;
+        
+    si = si + 6 + TreeSize(1);
+    
+    treeVar =  255*treeVar/max(max(treeVar));
+    
+    OUTPUT(si:si+TreeSize(1) - 1, patternSize + sp+1: end, 1 ) = treeVar;
+    OUTPUT(si:si+TreeSize(1) - 1, patternSize + sp+1: end, 2 ) = treeVar;
+    OUTPUT(si:si+TreeSize(1) - 1, patternSize + sp+1: end, 3 ) = treeVar;
+
+    
+    
+    R = OUTPUT( 1 + int16((i-1)*patternSize): patternSize-1, :,:);
+    imwrite(R, [folderName, 'R_', num2str(i), '.png'],'png');
+ 
+end
+
+
+imshow(OUTPUT)
+
+
+
+
+
+
+
+
+
+

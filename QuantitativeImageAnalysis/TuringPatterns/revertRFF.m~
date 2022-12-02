@@ -1,0 +1,47 @@
+
+
+filename = '/Users/ebru/Desktop/TuringDataSet/PATTERN32/test_weka32';
+
+outputFile = [ filename, 'revert.arff' ] ;
+
+
+
+
+
+in = fopen([ filename, '.arff'], 'r');
+out = fopen(outputFile, 'w');
+
+tline = fgetl(in);
+
+while ischar(tline)
+    
+    if (~isempty(tline))
+        if(tline(1) == '@')
+            fprintf(out, '%s\n', tline);
+        else
+           % parse normalize:
+           v = find(tline == ',');
+           E = [ v - 1];
+           S = [1, v + 1];
+           T = zeros(length(v)+1,1);
+           for i=1:length(T)
+               T(i) = str2double(tline(S(i):E(i)));
+           end
+           T = T/max(T);
+
+           for i=1:length(T)-1
+               fprintf(out, '%f, ', T(i));
+           end
+           fprintf(out, '%f\n', T(end));
+
+        end
+    end
+    
+    tline = fgetl(in);
+end
+
+fclose(in);
+fclose(out);
+
+
+

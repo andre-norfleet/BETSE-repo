@@ -1,2 +1,2 @@
 # BETSE-repo
- betse repositroy final
+ betse repository final

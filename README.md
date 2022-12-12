@@ -2,6 +2,7 @@
  betse repository final
  
  The ability to successfully run pipeline requires Matlab, Anaconda, WEKA, and CellProfiler; The repository is comprised of two main sections: 
+
 •	Quantitative Image Analysis and Pattern Recognition
 •	Parameter Optimization
 
